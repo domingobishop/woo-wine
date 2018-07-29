@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Woo wine
- * Plugin URI: https://github.com/domingobishop/woo-wine
+ * Plugin Name: WooWine
+ * Plugin URI: https://github.com/domingobishop/woowine
  * Description: A Woocommerce plugin for wine.
  * Version: 0.1 beta
  * Author: Chris Bishop
@@ -13,6 +13,7 @@
 include 'functions-global.php';
 include 'functions-woo.php';
 
+add_action('wp_enqueue_scripts', 'woo_wine_styles');
 add_action('after_setup_theme', 'woocommerce_support');
 add_action('woocommerce_before_main_content', 'woo_wine_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'woo_wine_wrapper_end', 10);
